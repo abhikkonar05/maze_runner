@@ -1,0 +1,61 @@
+# Unity Generated Files
+/Library/
+/Temp/
+/Logs/
+/UserSettings/
+/Build/
+/Builds/
+
+# Visual Studio / MonoDevelop
+.vs/
+.vscode/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+# C# Build Artifacts
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# IDE
+.DS_Store
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+
+# Unity meta files
+*.meta
+
+# OS Generated Files
+Thumbs.db
+thumbs.db
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# IDE Settings
+*.editorconfig
+
+# Local environment files
+.env
+.env.local
+.env.*.local
+
+# Misc
+*.log
+*.pidb
+*.pdb.meta
