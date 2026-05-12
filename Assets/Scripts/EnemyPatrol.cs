@@ -48,11 +48,20 @@ public class EnemyPatrol : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        // Destroy player on collision
+        // Check collision with player
         if (collision.gameObject.CompareTag("Player"))
         {
-            Destroy(collision.gameObject);
-              UIManager.instance.ShowGameOver();
+            // Stop player movement
+            PlayerMovement playerMovement =
+                collision.gameObject.GetComponent<PlayerMovement>();
+
+            if (playerMovement != null)
+            {
+                playerMovement.canMove = false;
+            }
+
+            // Show Game Over UI
+            UIManager.instance.ShowGameOver();
         }
     }
 }
