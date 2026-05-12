@@ -52,6 +52,7 @@ public class EnemyPatrol : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(collision.gameObject);
+              UIManager.instance.ShowGameOver();
         }
     }
 }

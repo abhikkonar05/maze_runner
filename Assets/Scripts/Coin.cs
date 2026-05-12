@@ -2,15 +2,21 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    public int points = 10;
+    public int coinValue = 10;
+    public AudioClip collectSound;
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
         {
-            GameManager.instance.AddScore(points);
+            GameManager.instance.AddScore(coinValue);
 
-            Destroy(gameObject);
+            AudioSource.PlayClipAtPoint(
+                collectSound,
+                transform.position
+            );
+
+           Destroy(transform.root.gameObject);
         }
     }
 }
